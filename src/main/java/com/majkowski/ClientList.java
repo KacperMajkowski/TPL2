@@ -1,42 +1,41 @@
 package com.majkowski;
+
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-import java.util.ArrayList;
-
 /**
- * Klasa listy klientow
+ * Klasa listy klientow.;
  */
 public class ClientList {
 
-  /** Lista Klientow */
-  transient public ArrayList<Client>  clients = new ArrayList<>();
+  /** Lista Klientow. */
+  public transient ArrayList<Client>  clients = new ArrayList<>();
 
-  /** Skaner */
-  transient public Scanner scan = new Scanner(System.in);
-  /** Wejscie uzytkownika */
-  transient public String input;
+  /** Skaner. */
+  public transient Scanner scan = new Scanner(System.in);
+  /** Wejscie uzytkownika. */
+  public transient String input;
 
   /**
-   * Wypisywanie listy klientow
+   * Wypisywanie listy klientow.
    */
-  public void printClients()
-  {
+  public void printClients() {
     System.out.println("Klienci:");
-    for(final Client client: clients){
+    for (final Client client : clients) {
       System.out.println(client.firstName + " " + client.lastName);
     }
   }
 
   /**
-   * Dodawanie klientow
+   * Dodawanie klientow.
    */
-  public void addClient()
-  {
+  public void addClient() {
     String firstName;
-    String lastName;
     System.out.println("Podaj imie");
     firstName = scan.nextLine();
+
+    String lastName;
     System.out.println("Podaj nazwisko");
     lastName = scan.nextLine();
 
@@ -44,10 +43,9 @@ public class ClientList {
   }
 
   /**
-   * Metoda przenoszaca uzytkownika do menu klienta
+   * Metoda przenoszaca uzytkownika do menu klienta.
    */
-  public void modifyClient()
-  {
+  public void modifyClient() {
     System.out.println("Podaj imie szukanego klienta:");
     final String firstName = scan.nextLine();
     System.out.println("Podaj nazwisko szukanego klienta:");
@@ -55,16 +53,14 @@ public class ClientList {
 
     boolean foundClient = false;
 
-    for(final Client client: clients)
-    {
-      if(Objects.equals(client.firstName, firstName) && Objects.equals(client.lastName, lastName))
-      {
+    for (final Client client : clients) {
+      if (Objects.equals(client.firstName, firstName)
+          && Objects.equals(client.lastName, lastName)) {
         foundClient = true;
 
         input = " ";
 
-        while(!Objects.equals(input, "0"))
-        {
+        while (!Objects.equals(input, "0")) {
           System.out.println("\n" + client.firstName + " " + client.lastName);
           System.out.println("1 - Dodaj produkt do faktury klienta");
           System.out.println("2 - Usun produkt z faktury klienta");
@@ -73,21 +69,18 @@ public class ClientList {
 
           input = scan.nextLine();
 
-          if(Objects.equals(input, "1")) {
+          if (Objects.equals(input, "1")) {
             client.addProduct();
-          }
-          else if(Objects.equals(input, "2")) {
+          } else if (Objects.equals(input, "2")) {
             client.removeProduct();
-          }
-          else if(Objects.equals(input, "3")) {
+          } else if (Objects.equals(input, "3")) {
             client.printInvoice();
           }
         }
       }
     }
 
-    if(!foundClient)
-    {
+    if (!foundClient) {
       System.out.println("Nie znaleziono klienta");
     }
   }

@@ -1,19 +1,19 @@
 package com.majkowski;
 
 /**
- * Klasa produktu - elementu faktury
+ * Klasa produktu - elementu faktury.
  */
 public class Product {
 
-  /** Nazwa produktu */
+  /** Nazwa produktu. */
   public final transient String name;
-  /** Cena produktu */
+  /** Cena produktu. */
   public final transient int price;
-  /** Ilosc produktu */
+  /** Ilosc produktu. */
   public final transient int count;
 
-  /** Kostruktor produktu */
-  public Product(final String name,  final int price, final int count){
+  /** Kostruktor produktu. */
+  public Product(final String name,  final int price, final int count) {
     this.name = name;
     this.price = price;
     this.count = count;

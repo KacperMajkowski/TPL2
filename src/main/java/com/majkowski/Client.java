@@ -2,45 +2,42 @@ package com.majkowski;
 
 
 /**
- * Klasa klienta
+ * Klasa klienta.
  */
 public class Client {
 
-  /** Imie klienta */
-  final public transient String firstName;
-  /** Nazwisko klienta */
-  final public transient String lastName;
+  /** Imie klienta. */
+  public final transient String firstName;
+  /** Nazwisko klienta. */
+  public final transient String lastName;
 
-  /** Faktura klienta */
+  /** Faktura klienta. */
   public transient Invoice inv = new Invoice();
 
-  /** Konstruktor klienta */
+  /** Konstruktor klienta. */
   public Client(final String firstName, final String lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
 
   /**
-   * Dodawanie produktu
+   * Dodawanie produktu.
    */
-  public void addProduct()
-  {
+  public void addProduct() {
     inv.addProduct();
   }
 
   /**
-   * Usuwanie produktu
+   * Usuwanie produktu.
    */
-  public void removeProduct()
-  {
+  public void removeProduct() {
     inv.removeProduct();
   }
 
   /**
-   * Drukowanie faktury
+   * Drukowanie faktury.
    */
-  public void printInvoice()
-  {
+  public void printInvoice() {
     inv.print(firstName, lastName);
   }
 }

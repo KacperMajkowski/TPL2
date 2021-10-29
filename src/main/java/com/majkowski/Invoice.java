@@ -5,29 +5,30 @@ import java.util.Objects;
 import java.util.Scanner;
 
 /**
- * Klasa faktury
+ * Klasa faktury.
  */
 public class Invoice {
 
-  /** Lista produktow */
+  /** Lista produktow. */
   public transient ArrayList<Product> products = new ArrayList<>();
 
-  /** Skaner */
+  /** Skaner. */
   public transient Scanner scan = new Scanner(System.in);
 
   /**
-   * Dodawanie produktow
+   * Dodawanie produktow.
    */
-  public void addProduct()
-  {
-    String name;
-    int price;
-    int count;
+  public void addProduct() {
 
+    String name;
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
+
+    int price;
     System.out.println("Podaj cene produktu");
     price = Integer.parseInt(scan.nextLine());
+
+    int count;
     System.out.println("Podaj ilosc produktu");
     count = Integer.parseInt(scan.nextLine());
 
@@ -35,10 +36,9 @@ public class Invoice {
   }
 
   /**
-   * Usuwanie produktu
+   * Usuwanie produktu.
    */
-  public void removeProduct()
-  {
+  public void removeProduct() {
     String name;
 
     System.out.println("Podaj nazwe produktu");
@@ -46,10 +46,8 @@ public class Invoice {
 
     final ArrayList<Product> productsToRemove = new ArrayList<>();
 
-    for(final Product p: products)
-    {
-      if(Objects.equals(p.name, name))
-      {
+    for (final Product p : products) {
+      if (Objects.equals(p.name, name)) {
         productsToRemove.add(p);
       }
     }
@@ -57,17 +55,16 @@ public class Invoice {
   }
 
   /**
-   * Drukowanie faktury
-   * @param firstName Imie klienta
-   * @param lastName Nazwisko klienta
+   * Drukowanie faktury.
+   *
+   * @param firstName Imie klienta.
+   * @param lastName Nazwisko klienta.
    */
-  public void print(final String firstName, final String lastName)
-  {
+  public void print(final String firstName, final String lastName) {
     int total = 0;
     System.out.println("\n====================");
     System.out.println(firstName + " " + lastName);
-    for(final Product p: products)
-    {
+    for (final Product p : products) {
       System.out.println("Produkt: " + p.name + "  Cena: " + p.price + "zl  Ilosc: " + p.count);
       total += p.price * p.count;
     }
