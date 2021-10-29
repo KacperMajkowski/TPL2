@@ -46,7 +46,7 @@ public class Invoice {
   public void print(String fn, String ln)
   {
     int total = 0;
-    System.out.println("====================");
+    System.out.println("\n====================");
     System.out.println(fn + " " + ln);
     for(Product p: products)
     {
