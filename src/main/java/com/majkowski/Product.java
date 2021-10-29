@@ -1,5 +1,8 @@
 package com.majkowski;
 
+/**
+ * Klasa produktu - elementu faktury
+ */
 public class Product {
 
   String name;

@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa listy klientow
+ */
 public class ClientList {
 
   ArrayList<Client> ClientList = new ArrayList<>();
@@ -11,6 +14,9 @@ public class ClientList {
   Scanner scan = new Scanner(System.in);
   String input;
 
+  /**
+   * Wypisywanie listy klientow
+   */
   public void PrintClients()
   {
     System.out.println("Klienci:");
@@ -19,6 +25,9 @@ public class ClientList {
     }
   }
 
+  /**
+   * Dodawanie klientow
+   */
   public void AddClient()
   {
     String fn, ln;
@@ -30,6 +39,9 @@ public class ClientList {
     ClientList.add(new Client(fn, ln));
   }
 
+  /**
+   * Metoda przenoszaca uzytkownika do menu klienta
+   */
   public void ModifyClient()
   {
     System.out.println("Podaj imie szukanego klienta:");

@@ -1,6 +1,9 @@
 package com.majkowski;
-import java.util.Scanner;
 
+
+/**
+ * Klasa klienta
+ */
 public class Client {
 
   String FirstName;
@@ -13,16 +16,25 @@ public class Client {
     this.LastName = ln;
   }
 
+  /**
+   * Dodawanie produktu
+   */
   public void AddProduct()
   {
     inv.AddProduct();
   }
 
+  /**
+   * Usuwanie produktu
+   */
   public void RemoveProduct()
   {
     inv.RemoveProduct();
   }
 
+  /**
+   * Drukowanie faktury
+   */
   public void printInvoice()
   {
     inv.print(FirstName, LastName);

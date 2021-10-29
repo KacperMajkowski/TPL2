@@ -2,6 +2,10 @@ package com.majkowski;
 import java.util.Objects;
 import java.util.Scanner;
 
+
+/**
+ * Klasa odpowiedzialna za petle dzialania programu
+ */
 public class Loop {
 
   ClientList list = new ClientList();
@@ -9,6 +13,9 @@ public class Loop {
   Scanner scan = new Scanner(System.in);
   String input = " ";
 
+  /**
+   * Funkcja rozpoczynajaca prace programu
+   */
   public void Start() {
 
     while(!Objects.equals(input, "0")) {

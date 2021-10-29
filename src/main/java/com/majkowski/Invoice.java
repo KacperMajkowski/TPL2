@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * Klasa faktury
+ */
 public class Invoice {
 
   ArrayList<Product> products = new ArrayList<>();
@@ -14,6 +17,9 @@ public class Invoice {
   int price;
   int count;
 
+  /**
+   * Dodawanie produktow
+   */
   public void AddProduct()
   {
     System.out.println("Podaj nazwe produktu");
@@ -26,6 +32,9 @@ public class Invoice {
     products.add(new Product(name, price, count));
   }
 
+  /**
+   * Usuwanie produktu
+   */
   public void RemoveProduct()
   {
     System.out.println("Podaj nazwe produktu");
@@ -43,6 +52,12 @@ public class Invoice {
     products.removeAll(ProductsToRemove);
   }
 
+  /**
+   * @param fn Imie klienta
+   * @param ln Nazwisko klienta
+   *
+   * Drukowanie faktury
+   */
   public void print(String fn, String ln)
   {
     int total = 0;
