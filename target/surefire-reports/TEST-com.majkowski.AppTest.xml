@@ -43,7 +43,7 @@
     <property name="java.class.path" value="C:\Program Files (x86)\apache-maven-3.8.3\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17.0.1"/>
     <property name="user.language" value="pl"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -61,7 +61,7 @@
     <property name="sun.stdout.encoding" value="cp852"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.majkowski.AppTest" name="shouldAnswerWithTrue" time="0.003"/>
-  <testcase classname="com.majkowski.AppTest" name="additionTest" time="0"/>
+  <testcase classname="com.majkowski.AppTest" name="shouldAnswerWithTrue" time="0.002"/>
+  <testcase classname="com.majkowski.AppTest" name="additionTest" time="0.001"/>
   <testcase classname="com.majkowski.AppTest" name="varTest" time="0"/>
 </testsuite>
