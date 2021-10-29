@@ -13,8 +13,6 @@ public class Client {
     this.LastName = ln;
   }
 
-  Scanner scan = new Scanner(System.in);
-
   public void AddProduct()
   {
     inv.AddProduct();
