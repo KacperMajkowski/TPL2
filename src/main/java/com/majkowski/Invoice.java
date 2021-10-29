@@ -53,10 +53,9 @@ public class Invoice {
   }
 
   /**
+   * Drukowanie faktury
    * @param fn Imie klienta
    * @param ln Nazwisko klienta
-   *
-   * Drukowanie faktury
    */
   public void print(String fn, String ln)
   {
