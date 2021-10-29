@@ -40,7 +40,6 @@ public class Invoice {
         ProductsToRemove.add(p);
       }
     }
-
     products.removeAll(ProductsToRemove);
   }
 
