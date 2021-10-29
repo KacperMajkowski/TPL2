@@ -9,10 +9,13 @@ import java.util.ArrayList;
  */
 public class ClientList {
 
-  ArrayList<Client> ClientList = new ArrayList<>();
+  /** Lista Klientow */
+  transient public ArrayList<Client>  clients = new ArrayList<>();
 
-  Scanner scan = new Scanner(System.in);
-  String input;
+  /** Skaner */
+  transient public Scanner scan = new Scanner(System.in);
+  /** Wejscie uzytkownika */
+  transient public String input;
 
   /**
    * Wypisywanie listy klientow
@@ -20,8 +23,8 @@ public class ClientList {
   public void printClients()
   {
     System.out.println("Klienci:");
-    for(Client client: ClientList){
-      System.out.println(client.FirstName + " " + client.LastName);
+    for(final Client client: clients){
+      System.out.println(client.firstName + " " + client.lastName);
     }
   }
 
@@ -30,13 +33,14 @@ public class ClientList {
    */
   public void addClient()
   {
-    String fn, ln;
+    String firstName;
+    String lastName;
     System.out.println("Podaj imie");
-    fn = scan.nextLine();
+    firstName = scan.nextLine();
     System.out.println("Podaj nazwisko");
-    ln = scan.nextLine();
+    lastName = scan.nextLine();
 
-    ClientList.add(new Client(fn, ln));
+    clients.add(new Client(firstName, lastName));
   }
 
   /**
@@ -45,23 +49,23 @@ public class ClientList {
   public void modifyClient()
   {
     System.out.println("Podaj imie szukanego klienta:");
-    String fn = scan.nextLine();
+    final String firstName = scan.nextLine();
     System.out.println("Podaj nazwisko szukanego klienta:");
-    String ln = scan.nextLine();
+    final String lastName = scan.nextLine();
 
-    boolean FoundClient = false;
+    boolean foundClient = false;
 
-    for(Client client: ClientList)
+    for(final Client client: clients)
     {
-      if(Objects.equals(client.FirstName, fn) && Objects.equals(client.LastName, ln))
+      if(Objects.equals(client.firstName, firstName) && Objects.equals(client.lastName, lastName))
       {
-        FoundClient = true;
+        foundClient = true;
 
         input = " ";
 
         while(!Objects.equals(input, "0"))
         {
-          System.out.println("\n" + client.FirstName + " " + client.LastName);
+          System.out.println("\n" + client.firstName + " " + client.lastName);
           System.out.println("1 - Dodaj produkt do faktury klienta");
           System.out.println("2 - Usun produkt z faktury klienta");
           System.out.println("3 - Wypisz fakture klienta");
@@ -82,7 +86,7 @@ public class ClientList {
       }
     }
 
-    if(!FoundClient)
+    if(!foundClient)
     {
       System.out.println("Nie znaleziono klienta");
     }

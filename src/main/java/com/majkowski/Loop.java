@@ -8,15 +8,19 @@ import java.util.Scanner;
  */
 public class Loop {
 
-  ClientList list = new ClientList();
+  /** Lista klientow */
+  public ClientList list = new ClientList();
 
-  Scanner scan = new Scanner(System.in);
-  String input = " ";
+  /** Skaner */
+  public Scanner scan = new Scanner(System.in);
+
+  /** Wejscie uzytkownika */
+  public String input = " ";
 
   /**
    * Funkcja rozpoczynajaca prace programu
    */
-  public void Start() {
+  public void start() {
 
     while(!Objects.equals(input, "0")) {
       System.out.println("\n1 - Dodaj klienta");

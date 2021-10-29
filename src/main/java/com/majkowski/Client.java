@@ -6,14 +6,18 @@ package com.majkowski;
  */
 public class Client {
 
-  String FirstName;
-  String LastName;
+  /** Imie klienta */
+  final public transient String firstName;
+  /** Nazwisko klienta */
+  final public transient String lastName;
 
-  Invoice inv = new Invoice();
+  /** Faktura klienta */
+  public transient Invoice inv = new Invoice();
 
-  Client(String fn, String ln) {
-    this.FirstName = fn;
-    this.LastName = ln;
+  /** Konstruktor klienta */
+  public Client(final String firstName, final String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
   /**
@@ -37,6 +41,6 @@ public class Client {
    */
   public void printInvoice()
   {
-    inv.print(FirstName, LastName);
+    inv.print(firstName, lastName);
   }
 }

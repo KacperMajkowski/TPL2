@@ -10,19 +10,20 @@ import java.util.Scanner;
 public class Invoice {
 
   /** Lista produktow */
-  ArrayList<Product> products = new ArrayList<>();
+  public transient ArrayList<Product> products = new ArrayList<>();
 
-  Scanner scan = new Scanner(System.in);
-
-  String name;
-  int price;
-  int count;
+  /** Skaner */
+  public transient Scanner scan = new Scanner(System.in);
 
   /**
    * Dodawanie produktow
    */
   public void addProduct()
   {
+    String name;
+    int price;
+    int count;
+
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
     System.out.println("Podaj cene produktu");
@@ -38,32 +39,34 @@ public class Invoice {
    */
   public void removeProduct()
   {
+    String name;
+
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
 
-    ArrayList<Product> ProductsToRemove = new ArrayList<>();
+    final ArrayList<Product> productsToRemove = new ArrayList<>();
 
-    for(Product p: products)
+    for(final Product p: products)
     {
       if(Objects.equals(p.name, name))
       {
-        ProductsToRemove.add(p);
+        productsToRemove.add(p);
       }
     }
-    products.removeAll(ProductsToRemove);
+    products.removeAll(productsToRemove);
   }
 
   /**
    * Drukowanie faktury
-   * @param fn Imie klienta
-   * @param ln Nazwisko klienta
+   * @param firstName Imie klienta
+   * @param lastName Nazwisko klienta
    */
-  public void print(String fn, String ln)
+  public void print(final String firstName, final String lastName)
   {
     int total = 0;
     System.out.println("\n====================");
-    System.out.println(fn + " " + ln);
-    for(Product p: products)
+    System.out.println(firstName + " " + lastName);
+    for(final Product p: products)
     {
       System.out.println("Produkt: " + p.name + "  Cena: " + p.price + "zl  Ilosc: " + p.count);
       total += p.price * p.count;
