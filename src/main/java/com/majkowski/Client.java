@@ -19,17 +19,17 @@ public class Client {
   /**
    * Dodawanie produktu
    */
-  public void AddProduct()
+  public void addProduct()
   {
-    inv.AddProduct();
+    inv.addProduct();
   }
 
   /**
    * Usuwanie produktu
    */
-  public void RemoveProduct()
+  public void removeProduct()
   {
-    inv.RemoveProduct();
+    inv.removeProduct();
   }
 
   /**

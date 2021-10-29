@@ -17,7 +17,7 @@ public class ClientList {
   /**
    * Wypisywanie listy klientow
    */
-  public void PrintClients()
+  public void printClients()
   {
     System.out.println("Klienci:");
     for(Client client: ClientList){
@@ -28,7 +28,7 @@ public class ClientList {
   /**
    * Dodawanie klientow
    */
-  public void AddClient()
+  public void addClient()
   {
     String fn, ln;
     System.out.println("Podaj imie");
@@ -42,7 +42,7 @@ public class ClientList {
   /**
    * Metoda przenoszaca uzytkownika do menu klienta
    */
-  public void ModifyClient()
+  public void modifyClient()
   {
     System.out.println("Podaj imie szukanego klienta:");
     String fn = scan.nextLine();
@@ -70,10 +70,10 @@ public class ClientList {
           input = scan.nextLine();
 
           if(Objects.equals(input, "1")) {
-            client.AddProduct();
+            client.addProduct();
           }
           else if(Objects.equals(input, "2")) {
-            client.RemoveProduct();
+            client.removeProduct();
           }
           else if(Objects.equals(input, "3")) {
             client.printInvoice();

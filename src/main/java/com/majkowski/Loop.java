@@ -27,13 +27,13 @@ public class Loop {
       input = scan.nextLine();
 
       if(Objects.equals(input, "1")) {
-        list.AddClient();
+        list.addClient();
       }
       else if(Objects.equals(input, "2")) {
-        list.PrintClients();
+        list.printClients();
       }
       else if(Objects.equals(input, "3")) {
-        list.ModifyClient();
+        list.modifyClient();
       }
     }
   }

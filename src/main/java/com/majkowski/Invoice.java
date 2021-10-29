@@ -9,6 +9,7 @@ import java.util.Scanner;
  */
 public class Invoice {
 
+  /** Lista produktow */
   ArrayList<Product> products = new ArrayList<>();
 
   Scanner scan = new Scanner(System.in);
@@ -20,7 +21,7 @@ public class Invoice {
   /**
    * Dodawanie produktow
    */
-  public void AddProduct()
+  public void addProduct()
   {
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
@@ -35,7 +36,7 @@ public class Invoice {
   /**
    * Usuwanie produktu
    */
-  public void RemoveProduct()
+  public void removeProduct()
   {
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
