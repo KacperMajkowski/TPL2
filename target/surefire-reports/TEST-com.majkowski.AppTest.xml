@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.majkowski.AppTest" time="0.011" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.majkowski.AppTest" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Kacper\TPL2"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Kacper\Desktop\TPL2"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="PL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Kacper\TPL2"/>
+    <property name="user.dir" value="C:\Users\Kacper\Desktop\TPL2"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
     <property name="os.arch" value="amd64"/>
@@ -61,5 +61,5 @@
     <property name="sun.stdout.encoding" value="cp852"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.majkowski.AppTest" name="shouldAnswerWithTrue" time="0.011"/>
+  <testcase classname="com.majkowski.AppTest" name="SumTest" time="0.013"/>
 </testsuite>
