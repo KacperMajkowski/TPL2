@@ -19,16 +19,4 @@ public class AppTest
         assertTrue( true );
     }
 
-    @Test
-    public void additionTest()
-    {
-        assertEquals(2 + 2, 4);
-    }
-
-    @Test
-    public void varTest()
-    {
-        Class1 c = new Class1();
-        assertEquals(c.x, 5);
-    }
 }
