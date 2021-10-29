@@ -1,5 +1,6 @@
-com\majkowski\ClientList.class
 com\majkowski\Client.class
-com\majkowski\Class1.class
-com\majkowski\Loop.class
+com\majkowski\Invoice.class
 com\majkowski\App.class
+com\majkowski\ClientList.class
+com\majkowski\Product.class
+com\majkowski\Loop.class
