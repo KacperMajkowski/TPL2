@@ -10,13 +10,13 @@ import java.util.Scanner;
 public class Loop {
 
   /** Lista klientow. */
-  public ClientList list = new ClientList();
+  public transient ClientList list = new ClientList();
 
   /** Skaner. */
-  public Scanner scan = new Scanner(System.in);
+  public transient Scanner scan = new Scanner(System.in);
 
   /** Wejscie uzytkownika. */
-  public String input = " ";
+  public transient String input = " ";
 
   /**
    * Funkcja rozpoczynajaca prace programu.

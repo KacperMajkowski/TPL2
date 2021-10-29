@@ -3,7 +3,7 @@ package com.majkowski;
 /**
  * Glowna klasa aplikacji.
  */
-public class App {
+public final class App {
     /**
      * Klasa main programu.
      *
@@ -13,5 +13,9 @@ public class App {
         System.out.println("\nWitaj uzytkowniku!");
         final Loop loop = new Loop();
         loop.start();
+    }
+    
+    private App() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 }
