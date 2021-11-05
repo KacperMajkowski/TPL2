@@ -68,7 +68,9 @@ public class ClientList {
           System.out.println("0 - Wroc do menu\n");
 
           input = scan.nextLine();
-
+          
+          /*Aby zachować wysoką spójność i niskie sprzężenie wywoływane
+          są funkcje w klasie client */
           if (Objects.equals(input, "1")) {
             client.addProduct();
           } else if (Objects.equals(input, "2")) {
