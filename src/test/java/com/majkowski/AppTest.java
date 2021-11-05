@@ -61,7 +61,6 @@ public class AppTest {
         }
     }
     
-    
     @After
     public void tearDown() {
         System.out.println("Tearing down");
