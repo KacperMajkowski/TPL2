@@ -22,7 +22,7 @@ public class Loop {
    * Funkcja rozpoczynajaca prace programu.
    */
   public void start() {
-    while (!Objects.equals(input, "0")) {
+    while (!Objects.equals(input, "10")) {
       System.out.println("\n1 - Dodaj klienta");
       System.out.println("2 - Wypisz wszytkich klientow");
       System.out.println("3 - Wybierz klienta do modyfikacji");
