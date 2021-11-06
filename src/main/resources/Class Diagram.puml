@@ -1,0 +1,69 @@
+@startuml
+
+Class App{}
+
+Class Loop
+{
+    ClientList list
+    String input
+
+    public void start()
+}
+
+Class Client
+{
+    String FirstName
+    String Lastname
+    Invoice inv
+
+    addProduct()
+    removeProduct()
+    printInvoice()
+}
+
+Class ClientList
+{
+    ArrayList<Clients> clients
+    String input
+
+    printClients()
+    addClient()
+    modifyClient()
+}
+
+Class Invoice
+{
+    ArrayList<Product> products
+
+    addProduct()
+    removeProduct()
+    print()
+}
+
+Class Product
+{
+    String name
+    double price
+    int count
+}
+
+App -> Loop: Start
+
+Loop -> ClientList: Create
+Loop -> ClientList: Give input
+Loop -> ClientList: 1..1
+
+ClientList -> Client: Add
+ClientList -> Client: Print
+ClientList -> Client: Modify
+ClientList -> Client: 1..*
+
+Client -> Invoice: addProduct
+Client -> Invoice: removeProduct
+Client -> Invoice: printInvoice
+Client -> Invoice: 1..1
+
+Invoice -> Product: Store
+Invoice -> Product: 1..*
+
+@enduml
