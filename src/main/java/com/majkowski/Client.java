@@ -19,6 +19,8 @@ public class Client {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+  
+  //Dla wysokiej spojnosci i niskiego sprzezeia funkcje zapisane są w klasie invoice
 
   /**
    * Dodawanie produktu.
