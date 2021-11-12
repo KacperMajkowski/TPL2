@@ -1,5 +1,4 @@
 com\majkowski\Client.class
-com\majkowski\Database.class
 com\majkowski\Invoice.class
 com\majkowski\App.class
 com\majkowski\ClientList.class
