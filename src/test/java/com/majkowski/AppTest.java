@@ -1,92 +1,64 @@
 package com.majkowski;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
 import org.junit.*;
-import org.mockito.Mock;
+
+import java.util.ArrayList;
 
 
 /**
  * Unit test for simple App.
  */
 public class AppTest {
-    protected Client c1;
-    protected Client c2;
+    /**
+     * Klient testowy
+     */
+    protected transient Client testClient;
+    protected transient Client testClient2;
+    ArrayList<Product> testDatabase;
     
-    @Mock
-    public Database data;
-    
-    String[] ProductNames;
-    double[] ProductPrices;
-    int[] ProductCounts;
-    
+    /**
+     * Setup testu
+     */
     @Before
     public void setUp() {
-        c1 = new Client("FirstNameTest", "LastNameTest");
-        c1.inv.products.add(new Product("TestProduct1", 3, 4));
-        c1.inv.products.add(new Product("TestProduct2", 5, 6));
+        testClient = new Client("FirstNameTest", "LastNameTest");
+        testClient.inv.products.add(new Product("TestProduct1", 3, 4));
+        testClient.inv.products.add(new Product("TestProduct2", 5, 6));
+        testClient.inv.products.add(new Product("TestProduct3", 7, 8));
         
-        c2 = new Client("FirstNameTest", "LastNameTest");
-        //data = mock(Database.class);
+        testClient2 = new Client("TestName2", "LastName2");
+        testDatabase = new ArrayList<>();
+        testDatabase.add(new Product("TestProduct4", 30, 40));
+        testDatabase.add(new Product("TestProduct5", 50, 60));
+        testDatabase.add(new Product("TestProduct6", 70, 80));
     }
     
     /**
      * Test sumowania faktury
      */
-    
     @Test
-    public void SumTest()
+    public void sumTest()
     {
         int total = 0;
-        for (final Product p : c1.inv.products) {
+        for (final Product p : testClient.inv.products) {
             total += p.price * p.count;
         }
-        assertEquals("Czy poprawnie suma rachunku", total, total);
+        assertEquals("Czy poprawnie suma rachunku", total, 3*4 + 5*6 + 7*8);
     }
     
-
+    /**
+     * Test importowania danych
+     */
     @Test
-    public void Test()
+    public void importTest()
     {
-        assertEquals(2+2, 4);
+        testClient2.inv.products.addAll(testDatabase);
+        assertEquals(testClient2.inv.products.size(), testDatabase.size());
     }
     
-    
-    
-    @Test
-    public void ImportTest()
-    {
-        Assert.assertEquals(2, 2);
-        
-    
-        /*
-        when(data.getName(0)).thenReturn("P1");
-        when(data.getPrice(0)).thenReturn(4.50);
-        when(data.getCount(0)).thenReturn(3);
-        when(data.getName(1)).thenReturn("P2");
-        when(data.getPrice(1)).thenReturn(6.00);
-        when(data.getCount(1)).thenReturn(5);
-        when(data.getLen()).thenReturn(2);
-        
-        
-        for(int i = 0; i < data.getLen(); i++)
-        {
-            ProductNames[i] = data.getName(i);
-            ProductPrices[i] = data.getPrice(i);
-            ProductCounts[i] = data.getCount(i);
-        }
-        
-        if(ProductNames.length == ProductPrices.length && ProductPrices.length == ProductCounts.length)
-        {
-            for(int i = 0; i < ProductNames.length ; i++)
-            {
-                c2.inv.products.add(new Product(ProductNames[i], ProductPrices[i], ProductCounts[i]));
-            }
-            //assertEquals(2, 2);
-        }
-        */
-    }
-    
-    
+    /**
+     * Koniec testu
+     */
     @After
     public void tearDown() {
         System.out.println("Tearing down");
