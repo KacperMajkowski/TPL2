@@ -14,7 +14,9 @@ public final class App {
         final Loop loop = new Loop();
         loop.start();
     }
+    
     private App() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+        throw new
+            UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 }

@@ -11,7 +11,6 @@ public class ClientList {
 
   /** Lista Klientow. */
   public transient ArrayList<Client>  clients = new ArrayList<>();
-
   /** Skaner. */
   public transient Scanner scan = new Scanner(System.in);
   /** Wejscie uzytkownika. */

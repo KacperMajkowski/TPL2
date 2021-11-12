@@ -20,7 +20,8 @@ public class Client {
     this.lastName = lastName;
   }
   
-  //Dla wysokiej spojnosci i niskiego sprzezeia funkcje zapisane są w klasie invoice
+  //Dla wysokiej spojnosci i niskiego sprzezeia
+  // funkcje zapisane są w klasie invoice
 
   /**
    * Dodawanie produktu.
