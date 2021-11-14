@@ -23,8 +23,8 @@ public class AppTest {
     public void setUp() {
         testClient = new Client("FirstNameTest", "LastNameTest");
         testClient.inv.products.add(new Product("TestProduct1", 3, 4));
-        testClient.inv.products.add(new Product("TestProduct2", 5, 6));
-        testClient.inv.products.add(new Product("TestProduct3", 7, 8));
+        testClient.inv.products.add(new Product("TestProduct2", 5.50, 6));
+        testClient.inv.products.add(new Product("TestProduct3", 7.99, 8));
         
         testClient2 = new Client("TestName2", "LastName2");
         testDatabase = new ArrayList<>();
@@ -39,11 +39,11 @@ public class AppTest {
     @Test
     public void sumTest()
     {
-        int total = 0;
+        double total = 0;
         for (final Product p : testClient.inv.products) {
             total += p.price * p.count;
         }
-        assertEquals("Czy poprawnie suma rachunku", total, 3*4 + 5*6 + 7*8);
+        assertEquals("Czy poprawnie suma rachunku", total, 3*4 + 5.50*6 + 7.99*8, 0.01);
     }
     
     /**

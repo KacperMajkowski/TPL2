@@ -24,9 +24,9 @@ public class Invoice {
     System.out.println("Podaj nazwe produktu");
     name = scan.nextLine();
 
-    int price;
+    double price;
     System.out.println("Podaj cene produktu");
-    price = Integer.parseInt(scan.nextLine());
+    price = Double.parseDouble(scan.nextLine());
 
     int count;
     System.out.println("Podaj ilosc produktu");
