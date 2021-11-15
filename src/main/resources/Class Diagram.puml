@@ -48,6 +48,7 @@ Class Product
 }
 
 App -> Loop: Start
+App -> Loop: 1..1
 
 Loop -> ClientList: Create
 Loop -> ClientList: Give input

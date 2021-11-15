@@ -10,11 +10,19 @@ import java.util.ArrayList;
  */
 public class AppTest {
     /**
-     * Klient testowy
+     * Klient testowy 1
      */
     protected transient Client testClient;
+    
+    /**
+     * Klient testowy 2
+     */
     protected transient Client testClient2;
-    ArrayList<Product> testDatabase;
+    
+    /**
+     * Przykładowa baza danych
+     */
+    protected ArrayList<Product> testDatabase;
     
     /**
      * Setup testu
@@ -43,7 +51,7 @@ public class AppTest {
         for (final Product p : testClient.inv.products) {
             total += p.price * p.count;
         }
-        assertEquals("Czy poprawnie suma rachunku", total, 3*4 + 5.50*6 + 7.99*8, 0.01);
+        assertEquals("Czy poprawnie suma rachunku?", total, 3*4 + 5.50*6 + 7.99*8, 0.01);
     }
     
     /**
@@ -53,7 +61,7 @@ public class AppTest {
     public void importTest()
     {
         testClient2.inv.products.addAll(testDatabase);
-        assertEquals(testClient2.inv.products.size(), testDatabase.size());
+        assertEquals("Czy ilość zaimportowanych produktów się zgadza?", testClient2.inv.products.size(), testDatabase.size());
     }
     
     /**
