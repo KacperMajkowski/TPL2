@@ -5,7 +5,6 @@ package com.majkowski;
  * Klasa klienta.
  */
 public class Client {
-
   /** Imie klienta. */
   public final transient String firstName;
   /** Nazwisko klienta. */

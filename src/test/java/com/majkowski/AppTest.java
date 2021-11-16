@@ -34,7 +34,7 @@ public class AppTest {
         testClient.inv.products.add(new Product("TestProduct2", 5.50, 6));
         testClient.inv.products.add(new Product("TestProduct3", 7.99, 8));
         
-        testClient2 = new Client("TestName2", "LastName2");
+        testClient2 = new Client("FirstNameTest2", "LastNameTest2");
         testDatabase = new ArrayList<>();
         testDatabase.add(new Product("TestProduct4", 30, 40));
         testDatabase.add(new Product("TestProduct5", 50, 60));
